@@ -95,36 +95,104 @@
 // // console.log(html);
 
 //array
-let niraj = ['asnika' , 'patel' , 'luvly'];
-console.log(niraj);
-console.log(niraj[3]);
-console.log(niraj[2]);
+// let niraj = ['asnika' , 'patel' , 'luvly'];
+// console.log(niraj);
+// console.log(niraj[3]);
+// console.log(niraj[2]);
 
-let ages = [ 20 , 21 , 22 , 23];
-console.log(ages[2]);
+// let ages = [ 20 , 21 , 22 , 23];
+// console.log(ages[2]);
 
-let random = ['niraj', 'luvly' , 21 , 19];
-console.log(random);
+// let random = ['niraj', 'luvly' , 21 , 19];
+// console.log(random);
 
-//length of array
-console.log(niraj.length);
+// //length of array
+// console.log(niraj.length);
 
-//array methods
-let results = niraj.join('-');
-console.log(results);
+// //array methods
+// let results = niraj.join('-');
+// console.log(results);
 
-//indexing 
-let res = niraj.indexOf('luvly');
-console.log(res);
+// //indexing 
+// let res = niraj.indexOf('luvly');
+// console.log(res);
 
-//add in array
-let ans = niraj.concat(['Niraj' , 'Kumar']);
-console.log(ans);
+// //add in array
+// let ans = niraj.concat(['Niraj' , 'Kumar']);
+// console.log(ans);
 
-let pushorpop = niraj.push('luv');
-pushorpop = niraj.pop();
-console.log(pushorpop);
+// let pushorpop = niraj.push('luv');
+// pushorpop = niraj.pop();
+// console.log(pushorpop);
+
+//NULL
+
+// let age;
+// console.log(age, age + 3, 'the age is ${age}');
+let age = null;
+console.log(age, age + 3, 'the age is ${age}');
+
+//booleans
+//booleans & comparisons
+console.log(true,false);
+
+//methods can return booleans
+let email = 'nirajkumarpatel264@gamil.com';
+let names = [ 'niraj' , 'kumar' , 'patel'];
+
+let result1 = email.includes('!');
+let result2 = names.includes('nakli');
+console.log(result1);
+console.log(result2);
+
+let result3 = names.includes('niraj');
+console.log(result3);
+
+//comparison operators
+let ans = 25;
+
+console.log(ans == 25);
+console.log(ans == 30);
+console.log(ans != 30);
+console.log(ans > 20);
+console.log(ans < 20);
+console.log(ans <= 25);
+
+let name = 'niraj';
+
+console.log(name == 'niraj');
+console.log(name == 'Niraj');
+console.log(name > 'luvly');
+
+let boy = 25;
+
+// loose comparison ( different types can still be equal)
+
+console.log(boy == 25);
+console.log(boy == '25');
+console.log(boy != 25);
+console.log(boy != '25');
+
+// strict comparison (different types cannot be equal);
+
+console.log(boy === 25);
+console.log(boy === '25');
+console.log(boy !== 25);
+console.log(boy !== '25');
 
 
+// type conversion
+let score = '100';
+console.log(score + 1);
 
+score = Number(score);
+console.log(typeof score);
 
+// let res = Number('hello');
+// console.log(res); NaN
+
+// let res = String(50);
+// console.log(res , typeof res);
+
+let res = Boolean(100);
+console.log(res , typeof res);
