@@ -348,71 +348,163 @@
 
 // function declaration
 
-function greet(){
-    console.log('hello niraj');
-}
-// function expression 
-// const speak = function(name, time){
-//     console.log(`good day! ${time} ${name}`);
+// function greet(){
+//     console.log('hello niraj');
+// }
+// // function expression 
+// // const speak = function(name, time){
+// //     console.log(`good day! ${time} ${name}`);
+// // }
+
+
+// // callling fuct 
+// greet();
+// greet();
+// //speak();
+
+// const speak = function(name,time){
+//     console.log(`good day ! ${time} ${name}`);
 // }
 
+// speak('niraj' , 'good morning');
 
-// callling fuct 
-greet();
-greet();
-//speak();
+// const calsArea = function(radius){
+//     let area = 3.14 * radius**2;
+//     return area;
+// }
+// const a = calsArea(5);
+// console.log('area is:' , a);
 
-const speak = function(name,time){
-    console.log(`good day ! ${time} ${name}`);
-}
+// //practise arrow functions
 
-speak('niraj' , 'good morning');
+// const greeet = () => 'hello niraj';
+// const results = greeet();
+// console.log(results);
 
-const calsArea = function(radius){
-    let area = 3.14 * radius**2;
-    return area;
-}
-const a = calsArea(5);
-console.log('area is:' , a);
+// ////
+// const name = 'niraj';
 
-//practise arrow functions
+// //function
+// const grt = () => 'hello';
+// let resultone = grt();
+// console.log(resultone);
 
-const greeet = () => 'hello niraj';
-const results = greeet();
-console.log(results);
+// // methods
 
-////
-const name = 'niraj';
+// let resultwo = name.toUpperCase();
+// console.log(resultwo);
 
-//function
-const grt = () => 'hello';
-let resultone = grt();
-console.log(resultone);
+// //callbacks & foreach
 
-// methods
+// let people = ['niraj', 'khushbu','deepak','nishant','ashant'];
+// people.forEach((person,index)=> {
+//     console.log(index,person);
+// })
 
-let resultwo = name.toUpperCase();
-console.log(resultwo);
+// //get a reference to the 'ul'
 
-//callbacks & foreach
+// const ul = document.querySelector('.people');
 
-let people = ['niraj', 'khushbu','deepak','nishant','ashant'];
-people.forEach((person,index)=> {
-    console.log(index,person);
-})
+// const people2 = ['niraj', 'khushbu', 'deepak', 'nishant','ashant'];
 
-//get a reference to the 'ul'
+// let html = ``;
 
-const ul = document.querySelector('.people');
+// people.forEach(function(person){
+//     //creat html template
+//     html += `<li style="color: purple">${person}</li>`;
+// })
+// console.log(html);
 
-const people2 = ['niraj', 'khushbu', 'deepak', 'nishant','ashant'];
+// ul.innerHTML = html;
 
-let html = ``;
+// OBJECTS
 
-people.forEach(function(person){
-    //creat html template
-    html += `<li style="color: purple">${person}</li>`;
-})
-console.log(html);
 
-ul.innerHTML = html;
+const blogs = [
+    {title: 'why mac & cheese rules', likes: 30 },
+    {title: '10 things to make with mar', likes: 50}
+];
+
+console.log(blogs);
+
+let user = {
+    name: 'Niraj',
+    age: 21,
+    email: 'nirajkumarpatel264@gmail.com',
+    location: 'Bihar',
+    blogs: ['why mac & cheese rules', '10 things to make with mar'],
+    login: function(){
+        console.log('the user logged in');
+    },
+    logout: function(){
+        console.log('the user logged out');
+    },
+    logBlogs: function(){
+        //console.log(this.blogs);
+        console.log('this user has written the following bolgs:');
+        this.blogs.forEach(blog => {
+            console.log(blog);
+        })
+    }
+};
+
+
+console.log(user);
+console.log(user.name);
+console.log(user.age);
+console.log(user['email']);
+
+user.logBlogs();
+console.log(this);
+
+
+// math objects
+
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+
+const area = 7.7;
+console.log(Math.round(area));
+console.log(Math.floor(area));
+console.log(Math.ceil(area));
+console.log(Math.trunc(area));
+
+//random numbers
+
+const random = Math.random();
+console.log(random);
+
+/* symbol : use with objects
+
+primitive types :- numbers , strings , booleans , null , undefined , symbols
+refrence types :- all types of objects , objects literals , arrays , function ,dates , all other objects; */
+
+// primitive types of objects is store in stack 
+// refrence types of objects is store in heap
+
+// primitive values
+
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+console.log(`scoreOne: ${scoreOne}` , `scoreTwo: ${scoreTwo}`);
+
+// if we change scoreOne
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}` , `scoreTwo: ${scoreTwo}`);
+
+// reference values
+
+const userOne = { naem: 'niraj', age:21};
+const userTwo = userOne;
+console.log(userOne,userTwo);
+
+userOne.age = 30;
+console.log(userOne,userTwo);
+
+
+
+
+
+
+
