@@ -209,136 +209,210 @@
 
 
 
-// if statements
-const age = 25;
+// // if statements
+// const age = 25;
 
-if(age > 20){
-    console.log('you are over 20 years old');
-}
+// if(age > 20){
+//     console.log('you are over 20 years old');
+// }
 
-const password = 'p@ss';
-if(password.length >= 8){
-    console.log('that password is long enough !');
-}
-else {
-    console.log('password is not long enough');
-}
+// const password = 'p@ss';
+// if(password.length >= 8){
+//     console.log('that password is long enough !');
+// }
+// else {
+//     console.log('password is not long enough');
+// }
 
-// for loops
+// // for loops
 
-for(let i=0; i<5; i++){
-    //console.log(i);
-    console.log('in loop: ', i);
-}
-console.log('loop finished');
+// for(let i=0; i<5; i++){
+//     //console.log(i);
+//     console.log('in loop: ', i);
+// }
+// console.log('loop finished');
 
-const names = ['asnika' , 'patel' , 'luvly'];
-for(let i=0;  i<names.length; i++){
-    console.log(names[i]);
-}
+// const names = ['asnika' , 'patel' , 'luvly'];
+// for(let i=0;  i<names.length; i++){
+//     console.log(names[i]);
+// }
 
-// while loops
+// // while loops
 
-let i = 0;
+// let i = 0;
 
-while(i<5){
-    console.log('in loop:' , i);
-    i++;
-}
+// while(i<5){
+//     console.log('in loop:' , i);
+//     i++;
+// }
 
-const namess = ['luvly' , 'asnika', 'patel'];
-let j = 0;
-while(j<namess.length){
-    console.log(namess[j]);
-    j++;
-}
+// const namess = ['luvly' , 'asnika', 'patel'];
+// let j = 0;
+// while(j<namess.length){
+//     console.log(namess[j]);
+//     j++;
+// }
 
-// do while loops
+// // do while loops
 
-let k = 3;
-do{
-    console.log('val of k is:' , k);
-    k++;
-} while(k<5);
+// let k = 3;
+// do{
+//     console.log('val of k is:' , k);
+//     k++;
+// } while(k<5);
 
 
-// logical operators - OR || and AND &&
+// // logical operators - OR || and AND &&
 
-const password2 = 'p@ssword1234';
+// const password2 = 'p@ssword1234';
 
-if(password2.length >= 12 && password2.includes('@')){
-    console.log('that password is mighty strong');
-}
-else if(password2.length >= 8 || password2.includes('@') && password2.length >=5){
-    console.log('that password is strong enough !');
-}
-else {
-    console.log('password is not strong enough');
-}
+// if(password2.length >= 12 && password2.includes('@')){
+//     console.log('that password is mighty strong');
+// }
+// else if(password2.length >= 8 || password2.includes('@') && password2.length >=5){
+//     console.log('that password is strong enough !');
+// }
+// else {
+//     console.log('password is not strong enough');
+// }
 
-// logical NOT (!)
+// // logical NOT (!)
 
-/* switch boolean value 
- console.log(!ture);
- console.log(!false);
- */
+// /* switch boolean value 
+//  console.log(!ture);
+//  console.log(!false);
+//  */
  
-let user = false;
-if(!user){
-    console.log('that is niraj');
+// let user = false;
+// if(!user){
+//     console.log('that is niraj');
 
+// }
+
+// //break and continue;
+
+// const scores = [50, 25, 0, 30, 100, 20, 10];
+
+// for(let i=0; i<scores.length; i++){
+//     console.log('your score: ', scores[i]);
+
+//     if(scores[i] == 0){
+//         continue;
+//     }
+
+//     if(scores[i] == 100){
+//         console.log('congrats, you got the top score');
+//         break;
+//     }
+// }
+
+// // switch statements
+// const grade = 'D';
+
+// switch(grade){
+//     case 'A':
+//         console.log('you got an A!');
+//     case 'B':
+//         console.log('you got an !B');
+//     case 'C':
+//         console.log('you got an C!');
+//     case 'D':
+//         console.log('you got an D!');
+//     case 'E':
+//         console.log('you got an E!');
+//     default:
+//         console.log('not a valid grade');
+
+// }
+
+// // variables  & block scope
+
+// let marks = 30;
+
+// if(true){
+//     let marks = 40;
+//     let name = 'niraj';
+//     console.log('inside 1st code block: ' , marks , name);
+
+//     if(true){
+//         let marks = 50;
+//         console.log('inside 2nd code block: ' , marks);
+
+//     }
+// }
+
+// console.log('outside code block: ', marks , name);
+
+
+// FUNCTIONS
+
+// function declaration
+
+function greet(){
+    console.log('hello niraj');
+}
+// function expression 
+// const speak = function(name, time){
+//     console.log(`good day! ${time} ${name}`);
+// }
+
+
+// callling fuct 
+greet();
+greet();
+//speak();
+
+const speak = function(name,time){
+    console.log(`good day ! ${time} ${name}`);
 }
 
-//break and continue;
+speak('niraj' , 'good morning');
 
-const scores = [50, 25, 0, 30, 100, 20, 10];
-
-for(let i=0; i<scores.length; i++){
-    console.log('your score: ', scores[i]);
-
-    if(scores[i] == 0){
-        continue;
-    }
-
-    if(scores[i] == 100){
-        console.log('congrats, you got the top score');
-        break;
-    }
+const calsArea = function(radius){
+    let area = 3.14 * radius**2;
+    return area;
 }
+const a = calsArea(5);
+console.log('area is:' , a);
 
-// switch statements
-const grade = 'D';
+//practise arrow functions
 
-switch(grade){
-    case 'A':
-        console.log('you got an A!');
-    case 'B':
-        console.log('you got an !B');
-    case 'C':
-        console.log('you got an C!');
-    case 'D':
-        console.log('you got an D!');
-    case 'E':
-        console.log('you got an E!');
-    default:
-        console.log('not a valid grade');
+const greeet = () => 'hello niraj';
+const results = greeet();
+console.log(results);
 
-}
+////
+const name = 'niraj';
 
-// variables  & block scope
+//function
+const grt = () => 'hello';
+let resultone = grt();
+console.log(resultone);
 
-let marks = 30;
+// methods
 
-if(true){
-    let marks = 40;
-    let name = 'niraj';
-    console.log('inside 1st code block: ' , marks , name);
+let resultwo = name.toUpperCase();
+console.log(resultwo);
 
-    if(true){
-        let marks = 50;
-        console.log('inside 2nd code block: ' , marks);
+//callbacks & foreach
 
-    }
-}
+let people = ['niraj', 'khushbu','deepak','nishant','ashant'];
+people.forEach((person,index)=> {
+    console.log(index,person);
+})
 
-console.log('outside code block: ', marks , name);
+//get a reference to the 'ul'
+
+const ul = document.querySelector('.people');
+
+const people2 = ['niraj', 'khushbu', 'deepak', 'nishant','ashant'];
+
+let html = ``;
+
+people.forEach(function(person){
+    //creat html template
+    html += `<li style="color: purple">${person}</li>`;
+})
+console.log(html);
+
+ul.innerHTML = html;
