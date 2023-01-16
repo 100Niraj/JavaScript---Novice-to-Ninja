@@ -129,70 +129,216 @@
 
 // let age;
 // console.log(age, age + 3, 'the age is ${age}');
-let age = null;
-console.log(age, age + 3, 'the age is ${age}');
+// let age = null;
+// console.log(age, age + 3, 'the age is ${age}');
 
-//booleans
-//booleans & comparisons
-console.log(true,false);
+// //booleans
+// //booleans & comparisons
+// console.log(true,false);
 
-//methods can return booleans
-let email = 'nirajkumarpatel264@gamil.com';
-let names = [ 'niraj' , 'kumar' , 'patel'];
+// //methods can return booleans
+// let email = 'nirajkumarpatel264@gamil.com';
+// let names = [ 'niraj' , 'kumar' , 'patel'];
 
-let result1 = email.includes('!');
-let result2 = names.includes('nakli');
-console.log(result1);
-console.log(result2);
+// let result1 = email.includes('!');
+// let result2 = names.includes('nakli');
+// console.log(result1);
+// console.log(result2);
 
-let result3 = names.includes('niraj');
-console.log(result3);
+// let result3 = names.includes('niraj');
+// console.log(result3);
 
-//comparison operators
-let ans = 25;
+// //comparison operators
+// let ans = 25;
 
-console.log(ans == 25);
-console.log(ans == 30);
-console.log(ans != 30);
-console.log(ans > 20);
-console.log(ans < 20);
-console.log(ans <= 25);
+// console.log(ans == 25);
+// console.log(ans == 30);
+// console.log(ans != 30);
+// console.log(ans > 20);
+// console.log(ans < 20);
+// console.log(ans <= 25);
 
-let name = 'niraj';
+// let name = 'niraj';
 
-console.log(name == 'niraj');
-console.log(name == 'Niraj');
-console.log(name > 'luvly');
+// console.log(name == 'niraj');
+// console.log(name == 'Niraj');
+// console.log(name > 'luvly');
 
-let boy = 25;
+// let boy = 25;
 
-// loose comparison ( different types can still be equal)
+// // loose comparison ( different types can still be equal)
 
-console.log(boy == 25);
-console.log(boy == '25');
-console.log(boy != 25);
-console.log(boy != '25');
+// console.log(boy == 25);
+// console.log(boy == '25');
+// console.log(boy != 25);
+// console.log(boy != '25');
 
-// strict comparison (different types cannot be equal);
+// // strict comparison (different types cannot be equal);
 
-console.log(boy === 25);
-console.log(boy === '25');
-console.log(boy !== 25);
-console.log(boy !== '25');
+// console.log(boy === 25);
+// console.log(boy === '25');
+// console.log(boy !== 25);
+// console.log(boy !== '25');
 
 
-// type conversion
-let score = '100';
-console.log(score + 1);
+// // type conversion
+// let score = '100';
+// console.log(score + 1);
 
-score = Number(score);
-console.log(typeof score);
+// score = Number(score);
+// console.log(typeof score);
 
-// let res = Number('hello');
-// console.log(res); NaN
+// // let res = Number('hello');
+// // console.log(res); NaN
 
-// let res = String(50);
+// // let res = String(50);
+// // console.log(res , typeof res);
+
+// let res = Boolean(100);
 // console.log(res , typeof res);
 
-let res = Boolean(100);
-console.log(res , typeof res);
+
+
+
+/* CONTROL FLOW.... */
+
+// use conditional statements for checking condition
+/* if(some condition is ture){
+    do something....
+} */
+
+
+
+// if statements
+const age = 25;
+
+if(age > 20){
+    console.log('you are over 20 years old');
+}
+
+const password = 'p@ss';
+if(password.length >= 8){
+    console.log('that password is long enough !');
+}
+else {
+    console.log('password is not long enough');
+}
+
+// for loops
+
+for(let i=0; i<5; i++){
+    //console.log(i);
+    console.log('in loop: ', i);
+}
+console.log('loop finished');
+
+const names = ['asnika' , 'patel' , 'luvly'];
+for(let i=0;  i<names.length; i++){
+    console.log(names[i]);
+}
+
+// while loops
+
+let i = 0;
+
+while(i<5){
+    console.log('in loop:' , i);
+    i++;
+}
+
+const namess = ['luvly' , 'asnika', 'patel'];
+let j = 0;
+while(j<namess.length){
+    console.log(namess[j]);
+    j++;
+}
+
+// do while loops
+
+let k = 3;
+do{
+    console.log('val of k is:' , k);
+    k++;
+} while(k<5);
+
+
+// logical operators - OR || and AND &&
+
+const password2 = 'p@ssword1234';
+
+if(password2.length >= 12 && password2.includes('@')){
+    console.log('that password is mighty strong');
+}
+else if(password2.length >= 8 || password2.includes('@') && password2.length >=5){
+    console.log('that password is strong enough !');
+}
+else {
+    console.log('password is not strong enough');
+}
+
+// logical NOT (!)
+
+/* switch boolean value 
+ console.log(!ture);
+ console.log(!false);
+ */
+ 
+let user = false;
+if(!user){
+    console.log('that is niraj');
+
+}
+
+//break and continue;
+
+const scores = [50, 25, 0, 30, 100, 20, 10];
+
+for(let i=0; i<scores.length; i++){
+    console.log('your score: ', scores[i]);
+
+    if(scores[i] == 0){
+        continue;
+    }
+
+    if(scores[i] == 100){
+        console.log('congrats, you got the top score');
+        break;
+    }
+}
+
+// switch statements
+const grade = 'D';
+
+switch(grade){
+    case 'A':
+        console.log('you got an A!');
+    case 'B':
+        console.log('you got an !B');
+    case 'C':
+        console.log('you got an C!');
+    case 'D':
+        console.log('you got an D!');
+    case 'E':
+        console.log('you got an E!');
+    default:
+        console.log('not a valid grade');
+
+}
+
+// variables  & block scope
+
+let marks = 30;
+
+if(true){
+    let marks = 40;
+    let name = 'niraj';
+    console.log('inside 1st code block: ' , marks , name);
+
+    if(true){
+        let marks = 50;
+        console.log('inside 2nd code block: ' , marks);
+
+    }
+}
+
+console.log('outside code block: ', marks , name);
