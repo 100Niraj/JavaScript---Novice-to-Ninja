@@ -1075,3 +1075,211 @@ console.log(para); */
 
 
 
+/////////////////// ADVANCE JAVASCRIPT //////////////////////////
+
+// What are topic we will cover in this advance javascript 
+//1. Event Propagation(Event Bubbling and Event Capturing)
+//2. Higher Order Function
+//3. Callback Function
+//4. Function currying(We will see after Async Js Section);
+//5. CallBack Hell
+//6. AJAX call using XMLHttprequest
+//7. BONUS Section JSON
+//8. Fetch API 
+//9. Promises
+//10.Async-Await
+//11.Error Handling in JS
+
+//////*** Event Propagation ********///////
+// what is event propagation ?
+// => The Event Propagation mode determines in which order the elements receive the event;
+// how it's work =>  window <- document <- <html> <- <body> <- <div> <- <button> to taget phase we call event method then we get some alert then after 
+// it goes on div and then after body and so on the whole process is bubbling;
+// just opposite of whole process of bubbling is capturing;
+
+//**  Event bubbling and capturing are two ways of event propagation in the HTML DOM API , when an event occurs in an element 
+// and both elements have registered a handle for that event;
+
+// The event propagation mode determines in which order the element recive the event;
+
+// // 2. Higher Order Function
+// // Function which takes another function as an arguments is called HOF
+// // wo function jo dushre function ko as an arguments accept krta hai use HOF
+
+// // 3. Call back Function;
+// // function which get passed as argument to another function is called CBF
+// // A callback function is function that is passed as an argument to another function, to be "called back" at a later time;
+// // jis bhi function ko hum kisi or function ke under as an argument passed krte hai then usko hum callback  fun bolte hai
+
+
+// const add = (a ,b) => {
+//     return a+b;
+// }
+
+// const calculator = (num1 , num2 , opeartor) =>{
+//     return opeartor(num1,num2);  // console.log(add(5,2));
+// }
+// console.log(calculator(2, 5, add));  // 7
+
+// // 4. ASynchronous in javaScript             ....................
+
+/// what we will see
+// 1. Hosting in JavaScript
+// 2. scope chain
+// 3. Lexical Scoping in Javascript
+// 4. Use Strict mode
+//5. This keyword
+// 6. Closures in javaScript
+// 7. What is asynchrounous javaScript Programming?
+// 8. What is Event Loop?
+
+// Hosting in javaScript
+
+// // we have a creation phase and execution phase.
+
+// // Hoisting in javaScript is a mechanism where variables and funtion declarationare moved to the top of their scope before the code execute.
+
+// for example 
+// console.log(myName);
+// var myName;
+// myName = "Niraj"; 
+
+// how it will be in output during creation phase;
+// 1. var myName = undefined;
+// 2. console.log(myname);
+// 3. myName = "Niraj";
+
+// In ES2015 (a.k.a. ES6) . hosting is avoided by using the let keyword instead of var .(the other differnce is that variable declared with let are local to the surrounding block, not the entire funciton);
+
+////// what is scope chain and lexical scoping in javaScript /////////////////////////////////
+
+// // The scope chain is used for resolve the value of varibale names in js
+// // scope chain in js is lexically defined , which means we can see what the scope chain will be by looking at the code;
+// // at the top , we have the global scope, whichis the window object in the browser
+// // lexical Scoping means Now, the inner fnc can get access to their parent funt varibales gut the vice - versa is not true;
+
+// for example 
+// let a = 'hello gys'; // global scope
+// const first = () =>{
+//     let b = 'how are you';
+
+//     const second = () => {
+//         let c = " hii , I am fine thank you";
+//         console.log(a+b+c); // here output is hello gys how are you hii, I am fine thank you so we can access all var from inner fun and global var 
+
+//     }
+//     second(); // console.log(a+b+c) // i can not use c
+// }
+// first();
+
+////////  what is closure in javascript ///////////////
+
+// // A closure is the combination of a fun bundled together ( enclose ) with references to its surrounding state(the lexical enviroment)
+
+// // In other words, we can say that  a closure gives you 
+// // access to an outer fun scope from an inner fun
+
+// // In javaScript. closures are created every time a fun is created , at fun created time.
+
+// for example
+
+// is same as lexically scoping 
+
+
+/// ************************** what is synchronous and Asynchronous in javaScript ********************////////////////
+
+// synchronous is same as queue where first come and first out eg agar 1 work take 10 min for doing any work and 2 nd one is take 5sec then first
+// will completed then next work will happend 
+// example
+// const fun2 = () =>{
+//     console.log('fun 2nd is call');
+// }
+// const fun1 = () => {
+//     console.log('fun 1 is called');
+//     fun2();
+//     console.log('fun 1 is called again');
+// }
+// fun1();
+
+// output :- 
+//fun 1 is called
+// fun 2nd is call
+// fun 1 is called again 
+
+// Asynchronous :- oppsite of synchrounous
+
+// const fun2 = () =>{
+//     setTimeout ( ()=>{
+//         console.log('fun 2nd is call');
+//     } , 2000)
+    
+// }
+// const fun1 = () => {
+//     console.log('fun 1 is called');
+//     fun2();
+//     console.log('fun 1 is called again');
+// }
+// fun1();
+
+// output :- 
+// fun 1 is called
+// fun 1 is called again
+// fun 2nd is call
+
+
+
+///   ******** What is Event Loop in JavaScript ******** ///////////
+
+// 
+
+
+// what si output of sum(5)(3)(8) ? 
+// // with the help of function currying we can get output 
+// // currying is a technique of evaluting function with multiple arguments, into sequence of function with single argument
+
+// function sum(num1){
+//     console.log(num1);
+// }  // it gives only 5 
+
+// function sum(num1){
+//     return function (num2) {
+//         console.log(num1,num2);
+//     }
+// }
+// it gives 5 , 3
+
+// function sum(num1){
+//     return function ( num2){
+//         return function (num3){
+//             console.log(num1 ,num2, num3);
+//         }
+//     }
+// }  // 5 3 8
+// one more method is here 
+// const sum = (num1) => (num2) => (num3) => console.log(num1 ,num2,num3);
+ 
+// sum(5)(3)(8);
+
+
+
+
+// // /// callback Hell // // // 
+// in each fun we call new fun 
+// setTimeout (() =>{
+//     console.log('1.work is done');
+//     setTimeout(() => {
+//         console.log('2.work is done');
+//         setTimeout(() => {
+//             console.log('3.work is done');
+//             setTimeout(() => {
+//                 console.log('4.work is done');
+//                 setTimeout(() => {
+//                     console.log('5.work is done');
+                    
+//                 }, 1000);
+//             }, 1000);
+//         }, 1000);
+        
+//     }, 1000);
+// }, 1000);
+
