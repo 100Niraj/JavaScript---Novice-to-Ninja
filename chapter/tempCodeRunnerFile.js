@@ -1,1 +1,2 @@
-sum(5)(3)(8)
+user.logBlogs();
+console.log(this);

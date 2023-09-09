@@ -600,7 +600,7 @@ console.log(para); */
 // const animals = ['pigs', 'cow', 'dogs', 'goats', 'sheep'];
 // const newanimals = animals.splice(3,0, "cats");
 // const newanimals2 = animals.splice(4,0, "monkey");
-// console.log(animals);
+// //console.log(animals);
 // console.log(newanimals2);  //both give same output
 
 ///output :-[ 'pigs', 'cow', 'dogs', 'cats', 'monkey', 'goats', 'sheep' ]
@@ -1282,4 +1282,51 @@ console.log(para); */
         
 //     }, 1000);
 // }, 1000);
+
+
+// by  useing  of promises we can handle the callback hell
+
+///*****   AJAX Call using XMLHttprequest ***********************************************************************//////
+
+//  XMLHttpRequest(XHR) objects are used to interct with server. You can retrieve data from a URL Without having a to do a full page refresh.
+// if we want to update any soft corner of a web page wihtout disrupting what the user doing . ( if we want to see some on any page and also write comment on the post  so there is asynscronous )
+// AJAX is programming language is stand asynchrounous javascript and xml 
+
+
+
+// const request = new XMLHttpRequest();
+// request.open('GET' , " URL");
+// request.send(); //se ham data access kr liye ;
+
+// to get the Response
+// mera page load ho jaye 
+
+// request.addEventListener('load', function() {
+//     this.responseText // ishe call prne pe jo hame jo bhi response bheja tha ham ushe get kr skte hai
+//      ///  like by using console.log(this.responseText);
+//     // lekin ham sis koi data mei store krna hai or json mei too hame ishe javascript mei convert karna padega take javascript smjh ske 
+//     /// const [data] = JSON.parse(this.responseText); ho convert json mei
+// })
+
+
+
+
+//PROMISES 
+// eg. at which positon on my friend i will also reach the same positon after 1 year; like promise to frnd ki mai tumhare pass 1 saal mei pauch jaunga
+// then is cond if he reach means success otherwise he would not reach means fail 2nd cond => sucess , fail 
+//  now we fetch using call api  // milega ya nhi milega 
+//  promises return karta hai ya data milega ya nhi milega fulfiled ya reject 
+
+// by using promises
+// fetch('URL') 
+// .then((res)=>{
+//     console.log(res.json()); // if hame data mil gaya then we call response 
+// }).catch((error) =>{
+//     console.log(error); // if data we can't get access then we call error;
+// })
+
+/// now we using async and await we get fetch api 
+//  by using promises we can use same by using async and await but it can handle id dirrent way 
+
+
 
